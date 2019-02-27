@@ -21,21 +21,21 @@ public class ShopTest {
         for (ShopOrderAction action : actions) {
             System.out.println(action);
         }
-        String acctionChoice = scan.nextLine().toUpperCase();
+        ShopOrderAction acctionChoice = ShopOrderAction.valueOf(scan.nextLine().toUpperCase());
         switch (acctionChoice) {
-            case "END": {
+            case END: {
                 System.out.println("Koniec programu");
                 break;
             }
-            case "ADD": {
+            case ADD: {
                 addMethod(file2, orderLists, scan);
                 break;
             }
-            case "CHANGE_STATUS": {
+            case CHANGE_STATUS: {
                 changeMethod(file2, orderLists, scan);
                 break;
             }
-            case "SORT": {
+            case SORT: {
                 sortMethod(orderLists, scan);
                 break;
             }
