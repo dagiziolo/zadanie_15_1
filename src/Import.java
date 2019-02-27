@@ -21,21 +21,4 @@ public class Import {
         }
         return orderLists;
     }
-
-//    public HashMap<Integer, ShopOrder> getImportMap(File file) {
-//        HashMap<Integer, ShopOrder> orderMaps = new HashMap<>();
-//        int i = 0;
-//        Scanner scan = null;
-//        try {
-//            scan = new Scanner(file);
-//        } catch (FileNotFoundException e) {
-//            System.out.println("Brak pliku");
-//        }
-//        while (scan.hasNextLine()) {
-//            String line = scan.nextLine();
-//            String[] s = line.split(";");
-//            orderMaps.put(Integer.valueOf(s[0]), new ShopOrder(Integer.valueOf(s[0]), s[1], Double.valueOf(s[2]), Status.valueOf(s[3])));
-//        }
-//        return orderMaps;
-//    }
 }
