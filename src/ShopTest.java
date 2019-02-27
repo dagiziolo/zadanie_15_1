@@ -44,9 +44,14 @@ public class ShopTest {
 
     private static void addMethod(File file2, ArrayList<ShopOrder> orderLists, Scanner scan) {
         Export export = new Export();
-        System.out.println("Podaj id");
-        int tmpId = scan.nextInt();
-        scan.nextLine();
+        int tmpId = 0;
+        for (ShopOrder orderList : orderLists) {
+            if (orderList.getId() > tmpId) {
+                tmpId = orderList.getId();
+            }
+        }
+        tmpId ++;
+        System.out.println(tmpId);
         System.out.println("Podaj nazwę zamówienia");
         String tmpName = scan.nextLine();
         String tmpName2 = tmpName + "-" + tmpId;
